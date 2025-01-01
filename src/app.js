@@ -12,6 +12,7 @@ function createMessageBubble(content, sender = "user") {
   // Avatar
   // 공통 프로필 아이콘 디자인 
   const avatar = document.createElement("div");
+  console.log(avatar)
   avatar.classList.add(
     "w-10",
     "h-10",
@@ -22,27 +23,26 @@ function createMessageBubble(content, sender = "user") {
     "justify-center",
     "font-bold",
     "text-white",
-    "overflow-hidden", //이미지가 둥글게 보이게 하기
+    // "overflow-hidden", //이미지가 둥글게 보이게 하기
   );
 
   // 개별 프로필 아이콘 디자인
+  const img = document.createElement("img");
   if (sender === "assistant") {
     avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
 
     // 노트봇 이미지 아이콘
-    const botImg = document.createElement("img");
-    botImg.src = "/public/assets/images/notebot_icon.png";
-    botImg.alt = "AI";
-    botImg.classList.add("w-8", "h-8");
-    avatar.appendChild(botImg);
+    img.src = "/assets/images/notebot.png";
+    img.alt = "AI";
+    img.classList.add("w-8", "h-8");
+    avatar.appendChild(img);
   } else {
     avatar.classList.add("bg-gradient-to-br", "from-purple-500", "to-purple-700");
     
-    const userImg = document.createElement("img");
-    userImg.src = "/public/assets/images/user_icon.png";
-    userImg.alt = "U";
-    userImg.classList.add("w-8", "h-8");
-    avatar.appendChild(userImg);
+    img.src = "/assets/images/user.png";
+    img.alt = "U";
+    img.classList.add("w-8", "h-8");
+    avatar.appendChild(img);
   }
 
   // Bubble
