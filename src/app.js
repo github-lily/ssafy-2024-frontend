@@ -28,12 +28,12 @@ function createMessageBubble(content, sender = "user") {
 
   // 개별 프로필 아이콘 디자인
   if (sender === "assistant") {
-    avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
+    avatar.classList.add("bg-gradient-to-br", "from-indigo-300", "to-blue-600");
     // 노트봇 이미지 아이콘
     avatar.textContent = "A"
   } else {
-    avatar.classList.add("bg-gradient-to-br", "from-purple-500", "to-purple-700");
-    avatar.textContent = "U"
+    avatar.classList.add("bg-gradient-to-br", "from-pink-400", "to-purple-500");
+    avatar.textContent = "Q"
   }
 
 
@@ -52,11 +52,10 @@ function createMessageBubble(content, sender = "user") {
 
   // 개별 말풍선 디자인
   if (sender === "assistant") {
-    bubble.classList.add("bg-gray-200", "text-gray-900");
+    bubble.classList.add("bg-gray-200", "text-gray-800");
   } else {
-    bubble.classList.add("bg-gradient-to-br", "from-purple-500", "to-purple-700", "text-white");
+    bubble.classList.add("bg-purple-400", "text-white");
   }
-
   bubble.textContent = content;
 
   wrapper.appendChild(avatar);
@@ -94,4 +93,5 @@ messageForm.addEventListener("submit", async (e) => {
   const response = await getAssistantResponse(message);
   chatContainer.appendChild(createMessageBubble(response, "assistant"));
   scrollToBottom();
-});
+})
+
