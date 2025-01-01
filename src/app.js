@@ -57,7 +57,7 @@ function createMessageBubble(content, sender = "user") {
   if (sender === "assistant") {
     bubble.classList.add("bg-indigo-100", "text-gray-600");
   } else {
-    bubble.classList.add("bg-pink-200", "text-gray-600");
+    bubble.classList.add("bg-gray-200", "text-gray-600");
   }
   bubble.textContent = content;
 
