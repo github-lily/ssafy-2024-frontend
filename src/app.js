@@ -31,15 +31,15 @@ function createMessageBubble(content, sender = "user") {
 
     // 노트봇 이미지 아이콘
     const botImg = document.createElement("img");
-    botImg.src = "/assets/images/notebot_icon.png";
+    botImg.src = "C:/Users/SSAFY/Desktop/AI/ssafy-2024-frontend-1-basic-echo/public/assets/images/notebot_icon.png";
     botImg.alt = "AI";
     botImg.classList.add("w-8", "h-8");
     avatar.appendChild(botImg);
   } else {
-    avatar.classList.add("bg-gradient-to-br", "from-blue-500", "to-blue-700");
+    avatar.classList.add("bg-gradient-to-br", "from-purple-500", "to-purple-700");
     
     const userImg = document.createElement("img");
-    userImg.src = "/assets/images/user_icon.png";
+    userImg.src = "C:/Users/SSAFY/Desktop/AI/ssafy-2024-frontend-1-basic-echo/public/assets/images/user_icon.png";
     userImg.alt = "U";
     userImg.classList.add("w-8", "h-8");
     avatar.appendChild(userImg);
@@ -62,7 +62,7 @@ function createMessageBubble(content, sender = "user") {
   if (sender === "assistant") {
     bubble.classList.add("bg-gray-200", "text-gray-900");
   } else {
-    bubble.classList.add("bg-purple-600", "text-white");
+    bubble.classList.add("bg-gradient-to-br", "from-purple-500", "to-purple-700", "text-white");
   }
 
   bubble.textContent = content;
