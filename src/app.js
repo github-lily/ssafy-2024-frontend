@@ -31,7 +31,7 @@ function createMessageBubble(content, sender = "user") {
 
     // 노트봇 이미지 아이콘
     const botImg = document.createElement("img");
-    botImg.src = "./assets/images/노트봇 아이콘.png";
+    botImg.src = "./assets/images/notebot_icon.png";
     botImg.alt = "노트봇 아이콘";
     botImg.classList.add("w-8", "h-8");
     avatar.appendChild(botImg);
@@ -39,7 +39,7 @@ function createMessageBubble(content, sender = "user") {
     avatar.classList.add("bg-gradient-to-br", "from-blue-500", "to-blue-700");
     
     const userImg = document.createElement("img");
-    userImg.src = "./assets/images/유저 아이콘.png";
+    userImg.src = "./assets/images/user_icon.png";
     userImg.alt = "유저 아이콘";
     userImg.classList.add("w-8", "h-8");
     avatar.appendChild(userImg);
