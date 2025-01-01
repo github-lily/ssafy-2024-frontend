@@ -9,13 +9,13 @@ function createMessageBubble(content, sender = "user") {
 
   // 개별 정렬 방향 설정
   if (sender === "user") {
-    wrapper.classList.add("flex-row-reverse","space-x-reverse", "space-x-3"); // Q는 오른쪽 정렬 // 수정!!
+    wrapper.classList.add("flex-row-reverse", "space-x-reverse", "space-x-3"); // Q는 오른쪽 정렬 // 수정!!
   }
 
   // Avatar
-  // 공통 프로필 아이콘 디자인 
+  // 공통 프로필 아이콘 디자인
   const avatar = document.createElement("div");
-  console.log(avatar)
+  console.log(avatar);
   avatar.classList.add(
     "w-10",
     "h-10",
@@ -25,20 +25,23 @@ function createMessageBubble(content, sender = "user") {
     "items-center",
     "justify-center",
     "font-bold",
-    "text-white",
+    "text-white"
     // "overflow-hidden", //이미지가 둥글게 보이게 하기
   );
 
   // 개별 프로필 아이콘 디자인
   if (sender === "assistant") {
     avatar.classList.add("bg-gradient-to-br", "from-indigo-300", "to-blue-600");
-    // 노트봇 이미지 아이콘
-    avatar.textContent = "A"
+    // 노트봇
+    avatar.textContent = "A";
   } else {
-    avatar.classList.add("bg-gradient-to-br", "from-pink-400", "to-purple-500");
-    avatar.textContent = "Q"
+    avatar.classList.add(
+      "bg-gradient-to-br",
+      "from-customPink",
+      "to-customSky700"
+    );
+    avatar.textContent = "Q";
   }
-
 
   // Bubble
   // 공통 말풍선 디자인
@@ -55,9 +58,14 @@ function createMessageBubble(content, sender = "user") {
 
   // 개별 말풍선 디자인
   if (sender === "assistant") {
-    bubble.classList.add("bg-indigo-100", "text-gray-600");
+    bubble.classList.add("bg-customSky100", "text-gray-600");
   } else {
-    bubble.classList.add("bg-gray-200", "text-gray-600");
+    bubble.classList.add(
+      "bg-gradient-to-br",
+      "from-customSky500",
+      "to-customSky700",
+      "text-white"
+    );
   }
   bubble.textContent = content;
 
@@ -96,5 +104,4 @@ messageForm.addEventListener("submit", async (e) => {
   const response = await getAssistantResponse(message);
   chatContainer.appendChild(createMessageBubble(response, "assistant"));
   scrollToBottom();
-})
-
+});
