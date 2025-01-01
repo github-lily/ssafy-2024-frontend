@@ -27,22 +27,13 @@ function createMessageBubble(content, sender = "user") {
   );
 
   // 개별 프로필 아이콘 디자인
-  const img = document.createElement("img");
   if (sender === "assistant") {
     avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
-
     // 노트봇 이미지 아이콘
-    img.src = "/assets/images/boticon.png";
-    img.alt = "AI";
-    img.classList.add("w-8", "h-8");
-    avatar.appendChild(img);
+    <i class="fa-brands fa-bots"></i>
   } else {
     avatar.classList.add("bg-gradient-to-br", "from-purple-500", "to-purple-700");
-    
-    img.src = "/assets/images/user.png";
-    img.alt = "U";
-    img.classList.add("w-8", "h-8");
-    avatar.appendChild(img);
+    <i class="fa-brands fa-bots"></i>
   }
 
 
