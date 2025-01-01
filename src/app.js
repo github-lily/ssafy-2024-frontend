@@ -7,7 +7,10 @@ function createMessageBubble(content, sender = "user") {
   const wrapper = document.createElement("div");
   wrapper.classList.add("mb-6", "flex", "items-start", "space-x-3");
 
-
+  // 개별 정렬 방향 설정
+  if (sender === "user") {
+    wrapper.classList.add("flex-row-reverse","space-x-reverse", "space-x-3"); // Q는 오른쪽 정렬 // 수정!!
+  }
 
   // Avatar
   // 공통 프로필 아이콘 디자인 
@@ -52,9 +55,9 @@ function createMessageBubble(content, sender = "user") {
 
   // 개별 말풍선 디자인
   if (sender === "assistant") {
-    bubble.classList.add("bg-gray-200", "text-gray-800");
+    bubble.classList.add("bg-indigo-100", "text-gray-600");
   } else {
-    bubble.classList.add("bg-purple-400", "text-white");
+    bubble.classList.add("bg-pink-200", "text-gray-600");
   }
   bubble.textContent = content;
 
