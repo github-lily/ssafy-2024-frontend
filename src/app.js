@@ -30,10 +30,10 @@ function createMessageBubble(content, sender = "user") {
   if (sender === "assistant") {
     avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
     // 노트봇 이미지 아이콘
-    <i class="fa-brands fa-bots"></i>
+    avatar.textContent = "A"
   } else {
     avatar.classList.add("bg-gradient-to-br", "from-purple-500", "to-purple-700");
-    <i class="fa-brands fa-bots"></i>
+    avatar.textContent = "U"
   }
 
 
