@@ -6,7 +6,7 @@ const userInput = document.getElementById("user-input");
 const apiSelector = document.getElementById("api-selector");
 const newChatBtn = document.getElementById("new-chat-btn");
 
-const BASE_URL = process.env.API_ENDPOINT;
+const BASE_URL = process.env.NEXT_PUBLIC_API_ENDPOINT;
 
 let db;
 
