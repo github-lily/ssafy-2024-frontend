@@ -1,0 +1,7 @@
+// vercel.json
+
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "source": "/api/:path*",
+  "destination": "http://백엔드_서버_IP/:path*"
+}
