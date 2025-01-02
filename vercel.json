@@ -1,7 +1,0 @@
-// vercel.json
-
-{
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "source": "/api/:path*",
-  "destination": "http://https://ssafy-2024-back.fly.dev/:path*"
-}
