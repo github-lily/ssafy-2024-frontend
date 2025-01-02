@@ -7,7 +7,7 @@ const apiSelector = document.getElementById("api-selector");
 const newChatBtn = document.getElementById("new-chat-btn");
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_ENDPOINT;
-
+// 시도
 let db;
 
 async function initDB() {
