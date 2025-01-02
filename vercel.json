@@ -3,5 +3,5 @@
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "source": "/api/:path*",
-  "destination": "http://백엔드_서버_IP/:path*"
+  "destination": "http://https://ssafy-2024-back.fly.dev/:path*"
 }
